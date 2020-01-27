@@ -1,5 +1,9 @@
+package guru.syntax;
+
+import java.util.*;
+
 public class ComparatorExample {
-    class Sortbylen implements Comparator<Envelopes>{
+    static class Sortbylen implements Comparator<Envelopes>{
         public int compare(Envelopes a, Envelopes b) { 
             return a.h-b.h; 
         }
@@ -7,14 +11,13 @@ public class ComparatorExample {
     class Envelopes{
         int h;
         int w;
-        Envelopes(int th,int w){
+        Envelopes(int th,int tw){
             h=th;
             w=tw;
         }
     }
-    public int solve(ArrayList<ArrayList<Integer>> A) {
-        
+    public static void main(String[] args) {
         ArrayList<Envelopes> lstEn=new ArrayList<Envelopes>();
-        Collections.sort(lst,new Sortbylen());
+        Collections.sort(lstEn,new Sortbylen());
     }
 }
